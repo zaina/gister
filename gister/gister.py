@@ -121,7 +121,7 @@ def create_gist():
         token_name = 'github'
 
     headers = get_headers(token_name) if not args.anonymous else None
-    payload = {'description': 'created by github.com/tr3buchet/gister',
+    payload = {'description': 'created by https://github.com/tr3buchet/gister',
                'public': not args.secret,
                'files': {payload[0]: {'content': payload[1]}}}
     r = requests.post(url + '/gists', data=json.dumps(payload),
